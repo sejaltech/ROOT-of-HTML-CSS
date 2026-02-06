@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Variables Task 1</title>
+
+<style>
+    :root {
+        --primary-color: #21b0a4;
+        --secondary-color: #0a5d56;
+        --text-color: #d68709;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+        h1 {
+            color: var(--primary-color);
+        }
+
+        p {
+            color: var(--text-color);
+        }
+
+        button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--primary-color);
+        }
+    </style>
+    <script>
+        const colors = ['#333333', '#FF5722', '#9C27B0', '#E91E63', '#00BCD4'];
+        let colorIndex = 0;
+
+        function changeTextColor() {
+            colorIndex = (colorIndex + 1) % colors.length;
+            document.documentElement.style.setProperty('--text-color', colors[colorIndex]);
+        }
+    </script>
+</head>
+</head>
+
+<body style="background-image: url('https://i.pinimg.com/736x/6e/ad/30/6ead300eda4931c43e4593587bacc818.jpg'); background-size: cover;">
+
+    <h1>Welcome to CSS Variables</h1>
+    <p>This paragraph uses the text color variable.</p>
+
+<button onclick="changeTextColor()">Click Me</button>
+
+</body>
+</html>

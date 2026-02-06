@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>
+        ROOT Elements
+    </title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --card-color: #f2f2f2;
+        }
+
+
+        body.dark {
+            --bg-color: #121212;
+            --text-color: #7e0d0d;
+            --card-color: #8024c7;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .card {
+            background-color: var(--card-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> DarK / Light theme</h1>
+    <button onclick="toggleTheme()"> Toogle Theme</button>
+    <div class="card">
+        <p>This content chnages color bases on the theme</p>
+    </div>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
+</body>
+
+</html>

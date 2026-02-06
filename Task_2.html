@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advanced Cards</title>
+
+<style>
+:root {
+    --card-bg: white;
+    --card-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    --radius: 12px;
+    --primary: #0984e3;
+}
+
+body {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 50px;
+    font-family: sans-serif;
+    background: #f1f2f6;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    width: 220px;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+h3 {
+    color: var(--primary);
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h3>Card One</h3>
+    <p>Reusable styling.</p>
+</div>
+
+<div class="card">
+    <h3>Card Two</h3>
+    <p>Same variables used.</p>
+</div>
+
+</body>
+</html>
+
